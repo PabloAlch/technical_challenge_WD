@@ -13,17 +13,20 @@ function HomeScreen() {
       .catch(error => console.error(error));
   }, [])
   return (
-    <>
-      <div className="">
+    <div>
+      <div className='d-flex justify-content-center py-5'>
+      <h2>Welcome to the Store</h2>
+      </div>
+      <div className="d-flex flex-wrap">
       {phones.map((phone) => (
         <div className="col" key={phone.id}>
           <PhoneItem {...phone}/>
         </div>
       ))}
-      patata
+      
     </div>
 
-    </>
+    </div>
   )
 }
 
